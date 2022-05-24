@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Изменение товара</title>
+{% endblock %}
+
+
+{% block body %}
+    <h1>Изменить товар</h1>
+    <form action="{{ url_for('items.edit_item', slug=item.slug) }}" method="POST">
+        {% for field in form %}
+            <div class = "add_item_form">
+                {{ field.label() }}
+                {{ field(class='inp_add') }}
+            </div>
+        {% endfor %}
+        <button type='submit' class="sub_but">Изменить</button>
+    </form>
+{% endblock %}

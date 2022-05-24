@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Каталог</title>
+{% endblock %}
+
+
+{% block body %}
+    <div class="body-title">Каталог</div>
+    <div class = "item_list">
+    {% for item in items %}
+            <a href="{{ url_for('items.item_detail', slug=item.slug) }}" class="item-container">
+                <div class="img_border">
+                <img class='cat_img' src="{{ item.img_url }}">
+                </div>
+                    <p>{{ item.name }}</p>
+                <div class="item_cat_price">
+                {% if item.isActive == True %}
+                <p>Цена: {{ item.price }} руб.</p>
+                {% else %}
+                <p>Нет в наличии</p>
+                {% endif %}
+                </div>
+            </a>
+    {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>{{ item.name }}</title>
+<meta http-equiv='Content-Type' content='text/html; charset=windows-1251' />
+
+{% endblock %}
+
+
+{% block body %}
+    <div class="body-title">{{ item.name }}</div>
+        <div class = "item_body">
+            <div class = "item_detail_container">
+                    <div class="item_det_img">
+                        <img src="{{ item.img_url }}" class="cat_img">
+                    </div>
+                <div class="item_detail">
+                {{ item.body }}</t>
+                    </div>
+                <div class = 'item_det_price'>
+                    {% if item.isActive == True %}
+                        {{ item.price }} руб.
+                    {% else %}
+                        Нет в наличии
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+
+<form method="POST">
+        <input type="hidden" name="item_id" value="{{ item.id }}">
+        <input type="hidden" name="item_name" value="{{ item.name }}">
+        <input type="hidden" name="item_price" value="{{ item.price}}">
+        <button type="submit" class = 'add_but'>Положить в корзину</button>
+    </form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+    <div class="confirm">
+        {% for msg in messages %}
+            {{msg}}
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+{% endblock %}

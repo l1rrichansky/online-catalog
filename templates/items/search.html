@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Поиск</title>
+{% endblock %}
+
+
+{% block body %}
+    <div class="body-title">Поиск по запросу {{q}}</div>
+    {% if items!=[] %}
+    <div class = "item_list">
+    {% for item in items %}
+            <a href="{{ url_for('items.item_detail', slug=item.slug) }}" class="item-container">
+                <div class="img_border">
+                <img class='cat_img' src="{{ item.img_url }}" width="170" height="215">
+                </div>
+                    <p>{{ item.name }}</p>
+                {% if item.isActive == True %}
+                <p>Цена: {{ item.price }} руб.</p>
+                {% else %}
+                <p>Нет в наличии</p>
+                {% endif %}
+            </a>
+    {% endfor %}
+    </div>
+    {% else %}
+        <div class="body-text">По вашему запросу ничего найдено :(</div>
+    {% endif %}
+{% endblock %}

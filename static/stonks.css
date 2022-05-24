@@ -1,0 +1,674 @@
+
+#main{
+min-height:100%;
+margin: 0 0 -70px;
+}
+
+a{
+	color:black;
+	text-decoration: none;
+	transition-duration: 0.4s;
+}
+
+a:visited { text-decoration: none; 
+ }
+
+a:focus { text-decoration: none; color:black; }
+
+ol, ul {
+    list-style: none;
+}
+
+
+.header{
+	text-align: center;
+	margin: 0px;
+	height: 120px;
+	position: relative;
+	background-color: #815c96;
+ 	box-shadow: inset 7px 6px 100px 6px rgba(0,0,0,0.38);
+
+}
+
+.container-nav
+{
+	position: absolute;
+	width: 700px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 50px;
+}
+
+.header-menu
+{
+    max-width: 1320px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.header-menu a
+{
+	font-family: 'Playfair Display SC';
+	text-decoration: none;
+	color: rgb(220, 220, 220);
+	cursor: pointer;
+}
+
+.text-list
+{
+	padding: 10px;
+	transition: background-color 0.6s ease;
+}
+
+.text-list:hover
+{
+	background-color: rgba(220,220, 220, 0.3);
+}
+
+.index-page-images{
+	margin-top: 50px;
+	text-align: center;
+}
+
+
+.img1{
+	transition: 1s;
+	margin-left: 20px;
+	margin-right: 20px;
+	box-shadow: 0px 0px 25px black;
+	width: 300px;
+	height: 300px;
+    overflow: hidden;
+}
+.img1:hover{
+	transform: scale(1.05);
+}
+
+
+.body
+{
+	padding-bottom: 30px;
+	min-height: 815px;
+	position: relative;
+	background-color: whitesmoke;
+	background-color: white;
+	box-shadow: inset 54px 0px 54px -75px rgba(0,0,0,0.75), inset -54px 0px 54px -75px rgba(0,0,0,0.75);
+}
+
+.body-title{
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+	padding-top: 20px;
+	margin-top: 0;
+}
+
+.inp input[type=text]{
+	padding: 10px;
+	font-family: 'Playfair Display SC';}
+
+.inp, .inp:before, .inp:after {
+	font-family: 'Playfair Display SC';
+  	box-sizing: border-box;
+  	width:  200px;
+	padding: 10px;
+  	border:0;
+  	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.about{
+	text-align: center;
+	padding-top: 30px;
+}
+
+.body-text{
+	text-align: center;
+	padding-top: 30px;
+}
+
+/*Каталог*/
+.item_list{
+	font-family: 'Comfortaa', bold;
+	text-align: center;
+    min-height: 200px;
+    overflow-y: auto;
+    align-items: flex-start;
+	margin-top: 20px;
+	font-weight: lighter;
+	font-size: 20px;
+	padding-left:10px;
+}
+
+.item-container{
+	transition-duration: 0.5s;
+	text-align: center;
+	float: left;
+    width: 370px;
+    height: 400px;
+    margin-left: 20px;
+    margin-right: 20px;  
+    margin-top: 20px;
+}
+.img_border:hover{
+	transform: scale(1.05)
+}
+.cat_img{
+	text-align: center;
+	transition-duration: 0.5s;
+	width: auto;
+	height: auto;
+	max-height: 215px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.img_border{
+	padding-top: auto;
+	padding-bottom: auto;
+	will-change: transform ;
+	transition-duration: 0.5s;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: auto;
+	height: 215px;
+}
+
+/*Оформление заказа*/
+.order-form{
+	width: fit-content;
+	text-align: center;
+    min-height: 200px;
+    overflow-y: auto;
+    align-items: flex-start;
+    margin: 0 auto;
+	margin-top: 20px;
+	font-weight: lighter;
+	font-size: 20px;
+	align-items: center;
+}
+
+.note{
+	min-height: 30px;
+	height: 100px;
+}
+
+.order-block{
+	align-items: center;
+	text-align: center;
+	float: left;
+	padding-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;  
+    margin-top: 20px;
+}
+
+
+/*Корзина*/
+
+.shop-cart-buttons-cont{
+	width: fit-content;
+	text-align: center;
+    min-height: 200px;
+    overflow-y: auto;
+    align-items: flex-start;
+    margin: 0 auto;
+	margin-top: 20px;
+	font-weight: lighter;
+	font-size: 20px;
+	align-items: center;
+}
+
+.sc{
+	margin-left: 0;
+	align-items: center;
+	text-align: center;
+	float: left;
+	padding-bottom: 20px; 
+    margin-top: 20px;
+}
+
+.cart-amount{
+	text-align: right;
+	padding-top: 30px;
+	font-weight: bold;
+}
+
+.cart_table{
+	margin-top: 20px;
+	font-size: 20px;
+	margin-left: 40px;
+}
+
+.cart_table table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart_table thead th:nth-child(1) {
+  width: 30%;
+}
+
+.cart_table thead th:nth-child(2) {
+  width: 20%;
+}
+
+.cart_table thead th:nth-child(3) {
+  width: 15%;
+}
+
+.cart_table thead th:nth-child(4) {
+  width: 35%;
+}
+
+.cart_table th, td {
+  padding: 20px;
+}
+
+.cart_table tbody td {
+  text-align: center;
+}
+
+.cart_table tfoot th {
+  text-align: right;
+}
+
+.er404{
+	font-size: 25px;
+	padding-top: 400px;
+	text-align: center;
+}
+
+.srch_but{
+	height: 35px;
+	margin-left: 10px;
+	transition-duration: 0.4s;
+	border: none;
+	font-family: 'Playfair Display SC';
+	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.add_but:hover{
+	background:  white;
+	color: black;
+	border: none;
+	cursor: pointer;
+}
+
+.add_but{
+	float: right;
+	height: 35px;
+	margin-right: 50px;
+	margin-top: 100px;
+	transition-duration: 0.4s;
+	font-family: 'Playfair Display SC';
+
+	border: none;
+	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+
+.srch_but:hover{
+	background:  white;
+	color: black;
+	border: none;
+	cursor: pointer;
+}
+
+.checkout_table{
+	font-size: 80%;
+}
+
+.af_or{
+	font-size: 25px;
+	padding-top: 250px;
+	text-align: center;
+	padding-top: auto;
+	padding-bottom: auto;
+}
+
+.order_id{
+	font-weight: bold;
+	text-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+	font-size: 140px;
+	color: #f76885;
+	margin-bottom: 20px;
+}
+
+.sub_but{
+	margin-right: 50px;
+	margin-left: 50px;
+	height: 35px;
+	transition-duration: 0.4s;
+	font-family: 'Playfair Display SC';
+	border: none;
+	background: #ebd9ff;
+	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.sub_but:hover{
+	background:  white;
+	color: black;
+	border: none;
+	cursor: pointer;
+}
+
+
+.link{
+	position: relative;
+	margin-top: 34px;
+	text-transform: uppercase;
+	font-family: 'Comfortaa', bold;
+	font-weight: bold;
+	font-size: 21pt;
+	margin-left: 20px;
+	margin-right: 20px;
+	float: right;
+}
+
+.link:hover{
+	color: white; 
+	text-shadow: 0px 0px 5px black;
+}
+
+
+.amount{
+	float: right;
+	font-size: 20pt;
+	margin-top: 50px;
+	margin-right: 50px;
+	font-family: 'Comfortaa', bold;
+	font-weight: bold;
+}
+
+
+
+button {
+      cursor: pointer;
+      }
+
+
+.order-block{
+	autocomplete="off";
+}
+
+.inp_add input[type=text]{
+	padding: 10px;
+	font-family: 'Playfair Display SC';
+
+}
+
+.inp_add option{
+	height: 100px;
+}
+
+.inp_add, .inp_add:before, .inp_add:after{
+	font-family: 'Playfair Display SC';
+	margin-top: 10px;
+	margin-bottom: 15px;
+	display: flex;
+  	width:  520px;
+	padding: 10px;
+  	border:0;
+  	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+.l123{
+	font-family: 'Comfortaa', bold;
+	margin-top: 100px;
+	text-align: center;
+}
+
+
+.add_item_form input, .add_item_form input:before, .add_item_form input:after {
+	padding: 10px;
+	font-family: 'Comfortaa', bold;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	display: flex;
+  	width:  500px;
+	padding: 10px;
+  	border:0;
+  	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.add_order_inputs input, .add_order_inputs input:before, .add_order_inputs input:after , .add_order_inputs select{
+	padding: 10px;
+	font-family: 'Comfortaa', bold;
+	margin-top: 10px;
+	margin-bottom: 15px;
+  	width:  250px;
+	padding: 10px;
+  	border:0;
+  	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.add_order_inputs textarea, .add_order_inputs textarea:before, .add_order_inputs textarea:after{
+	padding: 10px;
+	font-family: 'Comfortaa', bold;
+	margin-top: 10px;
+	margin-bottom: 15px;
+  	width:  250px;
+	padding: 10px;
+  	border:0;
+  	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.order{
+	margin-left: 0;
+	margin-right: 0;
+
+}
+
+
+.add_order_inputs select{
+	margin-top: 10px;
+	margin-bottom: 15px;
+  	width:  270px;
+	padding: 10px;
+  	border:0;
+  	box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.add_order_inputs{
+	margin-left: 0px;
+}
+
+.add_item_form{
+	margin-left: 50px;
+}
+
+.search_bar{
+	position: relative;
+	padding-top: 32px;
+	padding-left: 30px;
+	display: flex;
+}
+
+
+
+.item_body{
+	font-family: 'Comfortaa', bold;
+}
+
+.buy_but{
+	padding-top: 50px;
+	margin-right: 50px;
+	font-family: monospace;
+	font-weight: bold;
+	font-size: 20pt;
+	float: right;
+}
+
+.item_det_price{
+	padding-top: 25px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.item_cat_price{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
+
+.minus{
+	font-family: 'Playfair Display SC';
+	border-radius: 50%;
+	border: none;
+	margin-left: 10px;
+}
+
+.plus{
+	font-family: 'Playfair Display SC';
+	border-radius: 50%;
+	border: none;
+	margin-right: 10px;
+}
+
+input {outline:none;}
+
+::selection {background: #ccc;}
+::-moz-selection {background: #ccc;}
+::-webkit-selection {background: #ccc; color:#fff;}
+
+.inp::placeholder {
+  color: rgb(220, 220, 220);
+  opacity: 0.7;
+}
+
+.item_detail_container{
+	margin-top: 40px;
+	text-align: center;
+}
+
+.item_detail{
+	margin: 0;
+	padding-left: 400px;
+	padding-right: 400px;
+	margin-top: 40px;
+}
+
+select{
+	max-height: 100px;
+	resize: vertical;
+	outline: none;
+	-moz-appearance: none;
+	border: 1px solid #999;
+}
+
+textarea {
+	max-height: 100px;
+	resize: vertical;
+	outline: none;
+	-moz-appearance: none;
+	border: 1px solid #999; /* указание этого свойства также удалит обводку в FireFox */
+}
+
+
+.footer-container{
+	padding-top:  15px;
+	min-height: 100px;
+	text-align: center;
+	background-color: #333366;
+	color:  white;
+	box-shadow: inset 7px 6px 100px 6px rgba(0,0,0,0.38);
+}
+
+.footer-links{
+    align-items: center;
+    color:  white;
+    margin-bottom: 0;
+}
+
+.linksd{
+	color:  white;
+}
+
+
+
+
+html{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+
+body {
+	margin-bottom: 0;
+	margin: 0;
+	padding: 0;
+	font-family: 'Playfair Display SC';
+}
+
+
+/*Логин*/
+
+
+.login_er{
+	text-align: center;
+	color: red;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+}
+
+.login{
+	text-align: center;
+	align-items: center;
+	margin: auto;
+}
+
+.log{
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.login_but{
+	margin: 0;
+}
+
+.login input[type=text]{
+	font-family: 'Comfortaa', bold;
+}
+
+
+.confirm {
+background-color: #ebd9ff;
+margin-top: 100px;
+padding: 20px;
+float: right ;
+text-align: center;
+opacity: 1;
+animation:anim 5s;
+animation-duration:5s;
+position: absolute;
+top:0;
+left: -100%;  
+}
+ 
+@keyframes anim {
+0%, 100% {left: -100%;}
+30%, 70% {left: 0;}
+}
+
+/* item detail */
+
+.item_det_img{
+	max-height: 300px;
+}

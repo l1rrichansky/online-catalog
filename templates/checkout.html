@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Оформление заказа</title>
+
+{% endblock %}
+
+
+{% block body %}
+    <div class="body-title">Оформление заказа</div>
+    {% if lencl==0 %}
+        <div class="er404">Упс, у Вас корзине пусто.</div>
+    {% else %}
+    <div class="order-form">
+        <div class="order-block">
+            <div class="add_order_inputs">
+                <form method="POST">
+                    <h3>Имя</h3>
+                <input type="text" name="cl_name" placeholder="Имя" minlength="2" PATTERN="^[А-Яа-яЁё\s]+$" maxlength="20">
+                    <h3>Фамилия</h3>
+                <input type="text" name="cl_surname" placeholder="Фамилия" minlength="2" PATTERN="^[А-Яа-яЁё\s]+$" maxlength="20">
+                    <h3>Email</h3>
+                <input type="email" name="email" placeholder="Email*" required>
+                    <h3>Номер телефона</h3>
+                <input id='ph_num' name="ph_num" type='tel' placeholder='Ваш номер телефона' required value="+375 (__) ___-__-__"  pattern='^\+375(\s+)?\(?(17|25|29|33|44)\)?(\s+)?[0-9]{3}-?[0-9]{2}-?[0-9]{2}$'>
+
+                    <h3>Способ доставки</h3>
+                <select name="del_met" >
+                      <option value="Самовывоз" selected>Самовывоз</option>
+                      <option value="Почта" >Почта</option>
+                      <option value="Курьер">Курьер</option>
+                </select>
+                    <h3>Способ оплаты</h3>
+                <select name="pay_met" >
+                      <option value="Наличными" selected >Наличными</option>
+                      <option value="Картой Visa, MasterCart, Белкарт" >Картой Visa, MasterCart, Белкарт</option>
+                      <option value="Картой Visa, MasterCart, Белкарт онлайн ">Картой онлайн</option>
+                </select>
+                    <h3>Адрес</h3>
+                <input type="text" name="address" placeholder="Адрес" maxlength="200">
+                    <h3>Комментарий к заказу</h3>
+                    <textarea name="note" class="note" placeholder="Дополнительная информация, которая могла бы помочь нам." maxlength="200"></textarea>
+<p>
+                <button type="submit" class="sub_but order">Отправить заказ</button>
+            </form>
+            </div>
+        </div>
+        <div class="order-block">
+            <h3>Товары:</h3>
+                        <div class="checkout_table">
+            <table>
+                    <tr>
+                        <th>Наименование товара</th>
+                         <th>Количество</th>
+                         <th>Цена за ед.</th>
+                         <th>Стоимость, руб.</th>
+                    </tr>
+            {% for item in items %}
+                {% for item1 in cl %}
+                    {% if item.id==item1['item_id'] %}
+                      <tr>
+                        <td><a href="{{ url_for('items.item_detail', slug=item.slug) }}">{{ item.name}} </a></td>
+                          <td>
+                            <form method="post">
+                                <input type="hidden" name="temp_id" value="{{item.id}}">
+                                {{item1['qty']}}
+                             </form>
+                          </td>
+                          <td>{{item.price}}</td>
+                          <td>{{item.price*item1['qty']}}</td>
+                      </tr>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+                <tr>
+                        <td colspan="3" class="cart-amount">ИТОГО:</td><td style="font-weight: bold">{{ sum }}</td>
+                      </tr>
+            </table>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+{% endblock %}
